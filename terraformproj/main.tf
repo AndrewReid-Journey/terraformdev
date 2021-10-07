@@ -20,5 +20,4 @@ provider "aws" {
 
 locals {
   append = "myappended"
-}
-
+  }
