@@ -1,3 +1,14 @@
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "reidacus-terraformdev"
+
+    workspaces {
+      name = "terraformdev"
+    }
+  }
+}
+
 provider "aws" {
     region = "eu-west-1"
 }
@@ -12,3 +23,4 @@ output "reponame" {
     value = aws_ecr_repository.myecr.repository_url
     description = "My repo URL"
 }
+
