@@ -1,3 +1,14 @@
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "reidacus-terraformdev"
+
+    workspaces {
+      name = "terraformdev"
+    }
+  }
+}
+
 variable "ecr_name" {
     description = "The name to give the ECR"
     type = string
