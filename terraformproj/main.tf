@@ -17,7 +17,3 @@ terraform {
 provider "aws" {
     region = "eu-west-1"
 }
-
-locals {
-  append = "myappended"
-  }
