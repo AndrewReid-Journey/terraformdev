@@ -1,4 +1,4 @@
 output "vpcdetails" {
-  value = aws_vpc.myvpc.arn
+  value = createvpc.myvpc.arn
   description = "ARN of created VPC"
 }
