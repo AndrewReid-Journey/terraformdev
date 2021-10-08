@@ -35,12 +35,12 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           # AWS Access Key ID. This input is required if running in the GitHub hosted environment. It is optional if running in a self-hosted environment that already has AWS credentials, for example on an EC2 instance.
-          aws-access-key-id: ${{ secret.AWS_ACCESS_KEY_ID}} # optional
+          aws-access-key-id: ${{secret.AWS_ACCESS_KEY_ID}} # optional
           # AWS Secret Access Key. This input is required if running in the GitHub hosted environment. It is optional if running in a self-hosted environment that already has AWS credentials, for example on an EC2 instance.
-          aws-secret-access-key: ${{ secret.AWS_SECRET_ACCESS_KEY}}
+          aws-secret-access-key: ${{secret.AWS_SECRET_ACCESS_KEY}}
           # AWS Region, e.g. us-east-2
           aws-region: eu-west-1
           # Whether to set the AWS account ID for these credentials as a secret value, so that it is masked in logs. Valid values are 'true' and 'false'. Defaults to true
           mask-aws-account-id: true
       
-      
+
