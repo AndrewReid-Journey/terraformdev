@@ -1,5 +1,4 @@
 module "createvpc" {
   source = "./modules/vpc"
-  vpcname = "Hello"
-  
+  vpcname = var.vpcname
 }

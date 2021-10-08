@@ -1,1 +1,1 @@
-vpcname = "My Fabulous VPC"
+vpcname = "myfabvpc"
