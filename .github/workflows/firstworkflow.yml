@@ -36,7 +36,7 @@ jobs:
           aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
           # AWS Region, e.g. us-east-2
           aws-region: eu-west-1
-          # Whether to set the AWS account ID for these credentials as a secret value, so that it is masked in logs. Valid values are 'true' and 'false'. Defaults to true
+          # Whether to set the AWS account ID f or these credentials as a secret value, so that it is masked in logs. Valid values are 'true' and 'false'. Defaults to true
           mask-aws-account-id: true
       
       - name: Login to Amazon ECR
