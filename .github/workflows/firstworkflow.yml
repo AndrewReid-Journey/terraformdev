@@ -25,8 +25,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo ${$SHA_ID}:0:6}
-          
+          echo ${SHA_ID::6}
+    
 
       - name: Configure AWS Credentials
       # You may pin to the exact commit or the version.
