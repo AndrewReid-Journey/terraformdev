@@ -9,6 +9,7 @@ on:
   workflow_dispatch:
 env:
   SHA_ID: ${{ github.sha }}
+  SHORT_SHA: ${SHA_ID::7}
 jobs:
 
   firstechojob:
@@ -25,7 +26,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo ${SHA_ID::6}
+          echo $SHORT_SHA
     
 
       - name: Configure AWS Credentials
