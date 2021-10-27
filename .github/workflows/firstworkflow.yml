@@ -25,8 +25,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo "::set-output name=sha_short::$(git rev-parse --short '$GITHUB_SHA')"
+          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+          echo $Branch
           echo $sha_short
+          echo "Branch: ${{ steps.vars.outputs.branch }}"
+          echo "Sha: ${{ steps.vars.outputs.sha_short }}"
 
       - name: Configure AWS Credentials
       # You may pin to the exact commit or the version.
