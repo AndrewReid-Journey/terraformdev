@@ -7,8 +7,7 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
-env:
-  COMMITID: $(git rev-parse --short "$GITHUB_SHA")
+
 jobs:
 
   firstechojob:
@@ -25,8 +24,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+          echo ${{ github.head_ref }}.${{ github.sha }}
           
 
       - name: Configure AWS Credentials
