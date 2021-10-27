@@ -7,7 +7,8 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
-
+env:
+  SHA_ID: ${${{ github.sha }}:0:6}
 jobs:
 
   firstechojob:
@@ -24,8 +25,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo ${{ github.head_ref }}.${{ github.sha }}
-          
+          echo ${${{ github.sha }}:0:6}
+          echo $SHA_ID
 
       - name: Configure AWS Credentials
       # You may pin to the exact commit or the version.
