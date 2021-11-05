@@ -27,3 +27,9 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo "Commit ID : " ${SHA_ID::7}
+      - name: Install PHP dependencies
+        uses: php-actions/composer@v6
+        with:
+          php_version: 7.2
+          php_extensions: mcrypt pcntl pdo pdo_mysql
+          version: 1
