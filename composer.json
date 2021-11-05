@@ -1,89 +1,25 @@
 {
-  "name": "teamjourney/cms-website",
-  "type": "project",
-  "homepage": "https://journey.travel",
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org",
-      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
-    },
-    {
-      "type": "composer",
-      "url": "https://satis.control.journeyagency.travel"
+    "require": {
+        "monolog/monolog": "2.0.*",
+        "php": ">=7.1",
+        "composer/installers": "^1.12",
+        "vlucas/phpdotenv": "^5.3",
+        "oscarotero/env": "^2.1",
+        "roots/bedrock-autoloader": "^1.0",
+        "roots/bedrock-disallow-indexing": "^2.0",
+        "roots/wordpress": "5.8.1",
+        "roots/wp-config": "1.0.0",
+        "roots/wp-password-bcrypt": "1.0.0",
+        "humanmade/s3-uploads": "^3.0",
+        "wpackagist-plugin/auth0": "^4.3",
+        "wpackagist-plugin/autoptimize": "^2.9",
+        "wpackagist-plugin/classic-editor": "^1.6",
+        "wpackagist-plugin/classic-widgets": "^0.2.0",
+        "wpackagist-plugin/cookie-script-com": "^1.0",
+        "wpackagist-plugin/seo-by-rank-math": "^1.0",
+        "wpackagist-plugin/siteorigin-panels": "^2.15",
+        "wpackagist-plugin/so-widgets-bundle": "^1.25",
+        "wpackagist-plugin/wp-nested-pages": "^3.1",
+        "wpackagist-plugin/wp-sentry-integration": "^4.7"
     }
-  ],
-  "require": {
-    "php": ">=7.1",
-    "composer/installers": "^1.12",
-    "vlucas/phpdotenv": "^5.3",
-    "oscarotero/env": "^2.1",
-    "roots/bedrock-autoloader": "^1.0",
-    "roots/bedrock-disallow-indexing": "^2.0",
-    "roots/wordpress": "5.8.1",
-    "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0",
-    "humanmade/s3-uploads": "^3.0",
-    "wpackagist-plugin/auth0": "^4.3",
-    "wpackagist-plugin/autoptimize": "^2.9",
-    "wpackagist-plugin/classic-editor": "^1.6",
-    "wpackagist-plugin/classic-widgets": "^0.2.0",
-    "wpackagist-plugin/cookie-script-com": "^1.0",
-    "wpackagist-plugin/seo-by-rank-math": "^1.0",
-    "wpackagist-plugin/siteorigin-panels": "^2.15",
-    "wpackagist-plugin/so-widgets-bundle": "^1.25",
-    "wpackagist-plugin/wp-nested-pages": "^3.1",
-    "wpackagist-plugin/wp-sentry-integration": "^4.7",
-    "teamjourney/cms-plugin-admin-style": "dev-main",
-    "teamjourney/cms-plugin-auth": "dev-main",
-    "teamjourney/cms-plugin-booking": "dev-main",
-    "teamjourney/cms-plugin-booking-table": "dev-main",
-    "teamjourney/cms-plugin-core-widgets": "dev-main",
-    "teamjourney/cms-plugin-email": "dev-main",
-    "teamjourney/cms-plugin-google-map-field": "dev-main",
-    "teamjourney/cms-plugin-imgix": "dev-main",
-    "teamjourney/cms-plugin-interactive-map": "dev-main",
-    "teamjourney/cms-plugin-membership": "dev-main",
-    "teamjourney/cms-plugin-posttype-event": "dev-main",
-    "teamjourney/cms-plugin-posttype-offer": "dev-main",
-    "teamjourney/cms-plugin-posttype-video": "dev-main",
-    "teamjourney/cms-plugin-premium-acf": "dev-main",
-    "teamjourney/cms-plugin-premium-gravityforms": "dev-main",
-    "teamjourney/cms-plugin-premium-gravityformscampaignmonitor": "dev-main",
-    "teamjourney/cms-plugin-premium-gravityformsmailchimp": "dev-main",
-    "teamjourney/cms-plugin-premium-gravityformsuserregistration": "dev-main",
-    "teamjourney/cms-plugin-properties": "dev-main",
-    "teamjourney/cms-plugin-s3-pdf-rewrite": "dev-main",
-    "teamjourney/cms-plugin-siteorigin-permissions": "dev-main",
-    "teamjourney/cms-plugin-template-hierarchy": "dev-main",
-    "teamjourney/cms-plugin-trip-planner": "dev-main",
-    "teamjourney/cms-plugin-weather": "dev-main",
-    "teamjourney/cms-theme-core": "dev-main"
-  },
-  "require-dev": {
-    "squizlabs/php_codesniffer": "^3.6.0",
-    "roave/security-advisories": "dev-latest"
-  },
-  "config": {
-    "optimize-autoloader": true,
-    "preferred-install": "dist"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "extra": {
-    "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
-    },
-    "wordpress-install-dir": "web/wp"
-  },
-  "scripts": {
-    "post-root-package-install": [
-      "php -r \"copy('.env.example', '.env');\""
-    ],
-    "test": [
-      "phpcs"
-    ]
-  }
 }
