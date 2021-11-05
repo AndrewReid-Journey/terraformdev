@@ -1,25 +1,5 @@
 {
     "require": {
-        "monolog/monolog": "2.0.*",
-        "php": ">=7.1",
-        "composer/installers": "^1.12",
-        "vlucas/phpdotenv": "^5.3",
-        "oscarotero/env": "^2.1",
-        "roots/bedrock-autoloader": "^1.0",
-        "roots/bedrock-disallow-indexing": "^2.0",
-        "roots/wordpress": "5.8.1",
-        "roots/wp-config": "1.0.0",
-        "roots/wp-password-bcrypt": "1.0.0",
-        "humanmade/s3-uploads": "^3.0",
-        "wpackagist-plugin/auth0": "^4.3",
-        "wpackagist-plugin/autoptimize": "^2.9",
-        "wpackagist-plugin/classic-editor": "^1.6",
-        "wpackagist-plugin/classic-widgets": "^0.2.0",
-        "wpackagist-plugin/cookie-script-com": "^1.0",
-        "wpackagist-plugin/seo-by-rank-math": "^1.0",
-        "wpackagist-plugin/siteorigin-panels": "^2.15",
-        "wpackagist-plugin/so-widgets-bundle": "^1.25",
-        "wpackagist-plugin/wp-nested-pages": "^3.1",
-        "wpackagist-plugin/wp-sentry-integration": "^4.7"
+        "monolog/monolog": "2.0.*"
     }
 }
