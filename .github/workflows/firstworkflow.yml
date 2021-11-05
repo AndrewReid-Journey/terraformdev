@@ -37,5 +37,6 @@ jobs:
           version: 2
           command: install
           quiet: no
+          progress: yes
       - name: Dir Listing After
         run: ls -la
