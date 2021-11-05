@@ -34,7 +34,7 @@ jobs:
         with:
           php_version: 7.2
           php_extensions: mcrypt pcntl pdo pdo_mysql
-          version: 1
+          version: 2
           command: install
           quiet: no
       - name: Dir Listing After
