@@ -27,6 +27,9 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo "Commit ID : " ${SHA_ID::7}
+          
+      - name: ssh thing
+        run: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
       - name: Install PHP dependencies
         uses: php-actions/composer@v6
         with:
