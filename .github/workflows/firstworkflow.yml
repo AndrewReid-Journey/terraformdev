@@ -32,7 +32,6 @@ jobs:
       - name: ssh thing
         run: |
           mkdir ~/.ssh
-          mkdir ~/.composer
           ssh-keyscan -H github.com >> ~/.ssh/known_hosts
       # Create auth.json
       - name: Create auth.json file
