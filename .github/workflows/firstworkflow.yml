@@ -31,7 +31,8 @@ jobs:
       - name: ssh thing
         run: |
           mkdir .ssh
-          ssh-keyscan -H github.com >> .ssh/known_hosts
+          ssh-keyscan -H github.com >> $GITHUB_WORKSPACE/.ssh/known_hosts
+          ssh-keyscan -H github.com >> $GITHUB_WORKSPACE/known_hosts
       # Create auth.json
       - name: Create auth.json file
         run: echo '${{ secrets.COMPOSER_AUTH_JSON }}' > $GITHUB_WORKSPACE/auth.json
