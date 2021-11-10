@@ -29,7 +29,9 @@ jobs:
           echo "Commit ID : " ${SHA_ID::7}
           
       - name: ssh thing
-        run: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+        run: |
+          mkdir .ssh
+          ssh-keyscan -H github.com >> GITHUB_WORKSPACE/.ssh/known_hosts
       - name: Install PHP dependencies
         uses: php-actions/composer@v6
         with:
