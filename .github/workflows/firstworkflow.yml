@@ -27,8 +27,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo "Commit ID : " ${SHA_ID::7}
-      - name: Dir Listing
-        run: sudo ls -la /root
       - name: Install PHP dependencies
         uses: php-actions/composer@v6
         with:
@@ -38,5 +36,3 @@ jobs:
           command: install
           quiet: no
           progress: yes
-      - name: Dir Listing After
-        run: sudo ls -la /root
