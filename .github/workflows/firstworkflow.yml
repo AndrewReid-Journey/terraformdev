@@ -8,6 +8,7 @@ on:
     branches: [ main ]
   workflow_dispatch:
 env:
+  COMPOSER_AUTH_JSON: ${{ secrets.COMPOSER_AUTH_JSON }}
   SHA_ID: ${{ github.sha }}
   
 jobs:
@@ -31,10 +32,15 @@ jobs:
       - name: ssh thing
         run: |
           mkdir ~/.ssh
+          mkdir ~/.composer
           ssh-keyscan -H github.com >> ~/.ssh/known_hosts
       # Create auth.json
       - name: Create auth.json file
-        run: echo '${{ secrets.COMPOSER_AUTH_JSON }}' > $GITHUB_WORKSPACE/auth.json
+        run: |
+          echo '${{ secrets.COMPOSER_AUTH_JSON }}' > $GITHUB_WORKSPACE/auth.json
+          echo '${{ secrets.COMPOSER_AUTH_JSON }}' > ~/.composer/auth.json
+        
+        
         
       - name: Install PHP dependencies
         uses: php-actions/composer@v6
