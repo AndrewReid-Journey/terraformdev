@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 env:
   SHA_ID: ${{ github.sha }}
-  COMPOSER_AUTH_JSON: ${{ .secrets.COMPOSER_AUTH_JSON }}
+  COMPOSER_AUTH_JSON: ${{ secrets.COMPOSER_AUTH_JSON }}
   
 jobs:
 
@@ -42,4 +42,4 @@ jobs:
           command: install
           quiet: no
           progress: yes
-          COMPOSER_AUTH_JSON: ${{ .secrets.COMPOSER_AUTH_JSON }}
+          COMPOSER_AUTH_JSON: ${{ secrets.COMPOSER_AUTH_JSON }}
