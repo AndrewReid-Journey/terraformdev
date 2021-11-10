@@ -31,7 +31,7 @@ jobs:
       - name: ssh thing
         run: |
           mkdir .ssh
-          ssh-keyscan -H github.com >> GITHUB_WORKSPACE/.ssh/known_hosts
+          ssh-keyscan -H github.com >> .ssh/known_hosts
       - name: Install PHP dependencies
         uses: php-actions/composer@v6
         with:
