@@ -37,4 +37,4 @@ jobs:
         env:
           COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH_JSON }}
           COMPOSER_AUTH_JSON: ${{ secrets.COMPOSER_AUTH_JSON }}
-        run: docker build -t nginx-latest .
+        run: docker build --build-arg COMPOSER_AUTH_JSON=${{ secrets.COMPOSER_AUTH_JSON }} -t nginx-latest .
