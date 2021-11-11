@@ -8,8 +8,8 @@ on:
     branches: [ main ]
   workflow_dispatch:
 env:
-  COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH_JSON }}
-  COMPOSER_AUTH_JSON: ${{ secrets.COMPOSER_AUTH_JSON }}
+  #COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH_JSON }}
+  #COMPOSER_AUTH_JSON: ${{ secrets.COMPOSER_AUTH_JSON }}
   SHA_ID: ${{ github.sha }}
   
 jobs:
@@ -29,12 +29,12 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo "Commit ID : " ${SHA_ID::7}
-##Create auth.json
-      #- name: Create auth.json
-       # run: echo '${{ secrets.COMPOSER_AUTH_JSON }}' > $GITHUB_WORKSPACE/auth.json    
+Create auth.json
+      - name: Create auth.json
+        run: echo '${{ secrets.COMPOSER_AUTH_JSON }}' > $GITHUB_WORKSPACE/auth.json    
 ## Build the image
       - name: build
-        env:
-          COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH_JSON }}
-          COMPOSER_AUTH_JSON: ${{ secrets.COMPOSER_AUTH_JSON }}
-        run: docker build --build-arg 'COMPOSER_AUTH_JSON=${{ secrets.COMPOSER_AUTH_JSON }}' -t nginx-latest .
+        #env:
+          #COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH_JSON }}
+          #COMPOSER_AUTH_JSON: ${{ secrets.COMPOSER_AUTH_JSON }}
+        run: docker build -t nginx-latest .
