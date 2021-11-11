@@ -29,7 +29,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo "Commit ID : " ${SHA_ID::7}
-Create auth.json
+#Create auth.json
       - name: Create auth.json
         run: echo '${{ secrets.COMPOSER_AUTH_JSON }}' > $GITHUB_WORKSPACE/auth.json    
 ## Build the image
