@@ -1,8 +1,6 @@
 # Set args for PHP version
 ARG PHP_VERSION
 ARG PHP_VERSION=7.2
-ARG COMPOSER_AUTH_JSON
-ENV COMPOSER_AUTH=COMPOSER_AUTH_JSON
 
 # Set base image
 FROM php:${PHP_VERSION}-fpm-buster as php-fpm-base
