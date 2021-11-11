@@ -28,5 +28,6 @@ RUN mkdir .ssh && \
 
 # Set working directory to web root
 WORKDIR /var/www/html
+COPY . .
 # Composer install
 RUN composer install
