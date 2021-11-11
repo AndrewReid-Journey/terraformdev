@@ -8,7 +8,8 @@ on:
     branches: [ main ]
   workflow_dispatch:
 env:
-  COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH_JSON }}
+  COMPOSER_AUTH: '${{ secrets.COMPOSER_AUTH_JSON }}'
+  COMPOSER_AUTH_JSON: '${{ secrets.COMPOSER_AUTH_JSON }}'
   SHA_ID: ${{ github.sha }}
   
 jobs:
@@ -34,6 +35,6 @@ jobs:
 ## Build the image
       - name: build
         env:
-          COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH_JSON }}
-        run: |
-          docker build -t nginx-latest .
+          COMPOSER_AUTH: '${{ secrets.COMPOSER_AUTH_JSON }}'
+          COMPOSER_AUTH_JSON: '${{ secrets.COMPOSER_AUTH_JSON }}'
+        run: docker build -t nginx-latest .
